@@ -78,7 +78,8 @@ if (login_check($mysqli) == true) {
                         <div class="container-contact2-form-btn">
                             <div class="wrap-contact2-form-btn">
                                 <div class="contact2-form-bgbtn"></div>
-                                <input type="button" value="Log In" class="contact2-form-btn" onclick="formhash(this.form, this.form.password);">
+                                <button class="contact2-form-btn" onclick="formhash(this.form, this.form.password);">
+                                Log In</button>
                             </div>
                         </div>           
                     </form>
