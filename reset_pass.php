@@ -15,7 +15,6 @@ if($_GET['key'] && $_GET['reset'])
      $select=$mysqli->query($sql);
      $flag=0;
     while ($row = $select->fetch(\PDO::FETCH_ASSOC)) {
-            echo "in loop";
             $flag=1;
             break;
     }   
