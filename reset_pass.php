@@ -11,6 +11,7 @@ if($_GET['key'] && $_GET['reset'])
     header("Location: ../error.php?err=Unable to connect to MySQL");
     exit();
   }
+  echo "fasadsf  ";
   echo "{$email}";
   echo "{$pass}";
   $sql= "SELECT * FROM members WHERE email='".$email."' and password='".$pass."'";
@@ -25,6 +26,8 @@ if($_GET['key'] && $_GET['reset'])
   if($flag==1)
   {
     // echo "\ntrue";
+
+   echo "fasadsf  ";
     ?>
     <form method="post" action="submit_new.php">
     <input type="hidden" name="email" value="<?php echo $email;?>">
