@@ -60,11 +60,11 @@ if (login_check($mysqli) == true) {
         <div class="bg-contact2" style="background-image: url('images/bg-01.jpg');">
         <div class="container-contact2">
             <div class="wrap-contact2">
-                <form class="contact2-form validate-form">
-                    <span class="contact2-form-title">
+                    
+                    <form class="contact2-form validate-form" action="includes/process_login.php" method="post" name="login_form">  
+                       <span class="contact2-form-title">
                         Secure Log In
-                    </span>
-                    <form action="includes/process_login.php" method="post" name="login_form">  
+                        </span>
                         <div class="wrap-input2 validate-input" data-validate="Name is required">
                             <input class="input2" type="text" name="email">
                             <span class="focus-input2" data-placeholder="EMAIL"></span>
@@ -87,7 +87,6 @@ if (login_check($mysqli) == true) {
                     <p> <a href="reset_pass.html">Forgot Password?</a>.</p>
 
                     <p>You are currently logged <?php echo $logged ?>.</p>    
-                </form>
             </div>
         </div>
     </div>
