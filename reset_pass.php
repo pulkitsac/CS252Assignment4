@@ -11,13 +11,17 @@ if($_GET['key'] && $_GET['reset'])
     header("Location: ../error.php?err=Unable to connect to MySQL");
     exit();
   }
+  echo "{$email}";
+  echo "{$pass}";
   $sql= "SELECT * FROM members WHERE email='".$email."' and password='".$pass."'";
      $select=$mysqli->query($sql);
      $flag=0;
     while ($row = $select->fetch(\PDO::FETCH_ASSOC)) {
+            echo "in loop";
             $flag=1;
             break;
     }   
+    echo "{$flag}";
   if($flag==1)
   {
     // echo "\ntrue";
